@@ -6,11 +6,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
 }
-#tools a{
+#tools a {
   font-size: 20px;
-
 }
 #top-header {
   background-color: white;
@@ -26,7 +25,7 @@ header a:link {
 }
 /*===NAVBAR===*/
 .navbar {
-  background-color: #7A7A7A; /* Change the background color as needed */
+  background-color: #333; /* Change the background color as needed */
   overflow: hidden;
 }
 
@@ -62,42 +61,28 @@ header a:link {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
 .text-block {
   padding: 10px;
 }
-
 .text-block h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin: 0;
 }
-
 .text-block p {
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 5px 0;
 }
 .text-block button {
   background-color: #ff5722;
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.3rem;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .text-block button:hover {
   background-color: #ff4500;
 }
 
-
-
-/*.hero img {*/
-/*  width: 100%;*/
-/*}*/
-/**/
-/*.hero button {*/
-/*  background-color: rgb(125, 225, 225);*/
-/*  border-radius: 5px;*/
-/*}*/
