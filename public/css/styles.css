@@ -86,3 +86,15 @@ header a:link {
   background-color: #ff4500;
 }
 
+.reviews {
+  margin: 5px;
+  padding: 10px;
+}
+
+.reviews h3{
+  font-size: 30px;
+}
+
+.reviews ul{
+  list-style-type: none;
+}
