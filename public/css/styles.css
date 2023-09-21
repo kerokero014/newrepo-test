@@ -176,3 +176,7 @@ footer {
   background-color: #1f1f1f;
   color: #fff;
 }
+
+@media only screen and (min-width: 748px) {
+
+}
