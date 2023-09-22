@@ -8,6 +8,16 @@
   margin: 0;
   font-family: "Kanit", sans-serif;
 }
+
+html {
+  background-image: url(../images/site/checkerboard.jpg);
+}
+body {
+  background-color: #fff;
+  margin: auto;
+  border-style: solid;
+  border-color: #ffa599;
+}
 ::-webkit-scrollbar {
   display: none;
 }
@@ -76,8 +86,8 @@ header a:link {
   margin: 5px 0;
 }
 .text-block button {
-  background-color: #ff5722;
-  color: #fff;
+  background-color: #ffa599;
+  color: black;
   font-size: 1.3rem;
   padding: 10px 20px;
   border: none;
@@ -86,7 +96,13 @@ header a:link {
   transition: background-color 0.3s;
 }
 .text-block button:hover {
-  background-color: #ff4500;
+  background-color: #774e48;
+  color: white;
+}
+
+.upgrades button:hover {
+  background-color: #774e48;
+  color: white;
 }
 .reviews {
   margin: 5px;
@@ -113,20 +129,26 @@ header a:link {
   margin: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 5px 5px;
+  grid-template-rows: 0.2fr 1.4fr 1.4fr;
+  gap: 0px 0px;
   grid-template-areas:
-    "area-o area-t"
-    "area-tr area-f";
+  "delorean-tittle delorean-tittle"
+  "area-o area-t"
+  "area-tr area-f"; 
 }
+
+.delorean-tittle {
+  grid-area: delorean-tittle;
+}
+
 .area-o {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #333333ab;
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 5px;
   grid-area: area-o;
 }
 .area-t {
@@ -135,8 +157,8 @@ header a:link {
   flex-direction: column;
   align-items: center;
   background-color: #333333ab;
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 5px;
   grid-area: area-t;
 }
 .area-tr {
@@ -145,8 +167,8 @@ header a:link {
   flex-direction: column;
   align-items: center;
   background-color: #333333ab;
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 5px;
   grid-area: area-tr;
 }
 .area-f {
@@ -155,14 +177,14 @@ header a:link {
   flex-direction: column;
   align-items: center;
   background-color: #333333ab;
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 5px;
   grid-area: area-f;
 }
 
 .upgrades button {
-  background-color: #ff5722;
-  color: #fff;
+  background-color: #ffa599;
+  color: black;
   font-size: 1.3rem;
   padding: 10px 20px;
   border: none;
@@ -182,8 +204,11 @@ footer {
 
 @media only screen and (min-width: 748px) {
   body {
+    background-color: #fff;
     max-width: 900px;
     margin: auto;
+    border-style: solid;
+    border-color: #ffa599;
   }
   #top-header span a {
     color: black;
@@ -202,5 +227,29 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "hero hero"
+      "reviews upgrades";
+  }
+
+  .hero {
+    grid-area: hero;
+    margin: 15px 0;
+  }
+
+  .reviews {
+    grid-area: reviews;
+  }
+
+  .upgrades {
+    grid-area: upgrades;
   }
 }
