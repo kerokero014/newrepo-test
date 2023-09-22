@@ -181,7 +181,7 @@ footer {
 }
 
 @media only screen and (min-width: 748px) {
-  body{
+  body {
     max-width: 900px;
     margin: auto;
   }
@@ -203,6 +203,4 @@ footer {
     flex-direction: row;
     align-items: center;
   }
-
-
 }
