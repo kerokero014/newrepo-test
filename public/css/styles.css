@@ -6,7 +6,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Kanit", sans-serif;
+}
+:root {
+  --thin-font: "Kanit", sans-serif;
+  --reg-font: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -17,6 +20,7 @@ body {
   margin: auto;
   border-style: solid;
   border-color: #ffa599;
+  font-family: var(--reg-font);
 }
 ::-webkit-scrollbar {
   display: none;
@@ -30,6 +34,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: var(--thin-font);
 }
 header a:link {
   font-size: 30px;
@@ -132,9 +137,9 @@ header a:link {
   grid-template-rows: 0.2fr 1.4fr 1.4fr;
   gap: 0px 0px;
   grid-template-areas:
-  "delorean-tittle delorean-tittle"
-  "area-o area-t"
-  "area-tr area-f"; 
+    "delorean-tittle delorean-tittle"
+    "area-o area-t"
+    "area-tr area-f";
 }
 
 .delorean-tittle {
@@ -200,6 +205,7 @@ footer {
   padding: 10px;
   background-color: #1f1f1f;
   color: #fff;
+  font-family: vaR(--thin-font);
 }
 
 @media only screen and (min-width: 748px) {
@@ -229,20 +235,29 @@ footer {
     align-items: center;
   }
 
+
+  .reviews ul li{
+    font-size: 20px;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
+    grid-template-rows: 0.3fr 1.4fr 1.3fr;
+    gap: 5px 5px;
     grid-template-areas:
+      "motors-tittle motors-tittle"
       "hero hero"
       "reviews upgrades";
   }
 
+  .motors-tittle {
+    grid-area: motors-tittle;
+    font-family: var(--thin-font);
+  }
+
   .hero {
     grid-area: hero;
-    margin: 15px 0;
   }
 
   .reviews {
