@@ -23,4 +23,4 @@ UPDATE public.inventory
 SET inv_description = REPLACE(inv_description, 'small interiors', 'huge interior')
 WHERE inv_make = 'GM';
 
-h
+.
