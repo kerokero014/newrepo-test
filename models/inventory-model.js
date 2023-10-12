@@ -9,6 +9,9 @@ async function getClassifications() {
   );
 }
 
+
+
+
 module.exports = { getClassifications };
 
 /* ***************************
@@ -29,4 +32,4 @@ async function getInventoryByClassificationId(classification_id) {
   }
 }
 
-module.exports = { getClassifications, getInventoryByClassificationId };
+module.exports = {getClassifications, getInventoryByClassificationId};
