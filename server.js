@@ -26,6 +26,7 @@ app.use(static);
 //index route
 app.get("/", baseController.buildHome)
 // Inventory routes
+
 app.use("/inv", inventoryRoute)
 
 
