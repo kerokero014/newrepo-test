@@ -5,6 +5,7 @@
 /* ***********************
  * Require Statements
  *************************/
+const utilities = require('./utilities'); 
 const inventoryRoute = require("./routes/inventoryRoute")
 const baseController = require("./controllers/baseController")
 const express = require("express");
@@ -38,7 +39,6 @@ app.use(async (req, res, next) => {
   next({status: 404, message: 'Sorry, we appear to have lost that page.'})
 })
 
-
 /* ***********************
 * Express Error Handler
 * Place after all other middleware
@@ -52,7 +52,6 @@ app.use(async (err, req, res, next) => {
     nav
   })
 })
-
 
 /* ***********************
  * Local Server Information
