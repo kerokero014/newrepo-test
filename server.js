@@ -33,6 +33,11 @@ app.use("/inv", inventoryRoute)
 //  res.render("index", {title: "Home"});
 //});
 
+// File Not Found Route - must be last route in list
+app.use(async (req, res, next) => {
+  next({status: 404, message: 'Sorry, we appear to have lost that page.'})
+})
+
 /* ***********************
  * Local Server Information
  * Values from .env (environment) file
