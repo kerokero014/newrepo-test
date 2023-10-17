@@ -42,27 +42,36 @@ header a:link {
   text-decoration: none;
 }
 /*===NAVBAR===*/
-.navbar {
-  background-color: #333; /* Change the background color as needed */
+nav {
+  background-color: #333; 
   overflow: hidden;
 }
 
-.navbar ul {
+nav a:link{
+  color: white;
+  text-decoration: none;
+}
+
+nav a:visited{
+  color: white;
+}
+
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex; /* Use Flexbox to align items horizontally */
 }
-.navbar li {
+nav li {
   flex: 1; /* Distribute available space equally among the list items */
   text-align: center;
   padding: 14px 16px;
 }
-.navbar li:hover {
-  background-color: #1f1f1f; /* Change the hover background color as needed */
+nav li:hover {
+  background-color: #070707; /* Change the hover background color as needed */
   color: white;
 }
-.navbar li {
+nav li {
   color: white;
   text-decoration: none;
   list-style: none;
@@ -223,7 +232,7 @@ footer {
   #tools a {
     font-size: 30px;
   }
-  .navbar ul li {
+  nav ul li {
     font-size: 25px;
   }
   .hero img {
