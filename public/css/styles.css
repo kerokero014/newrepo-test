@@ -208,6 +208,7 @@ nav li {
 }
 
 footer {
+  font-size: 20px;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -215,6 +216,21 @@ footer {
   background-color: #1f1f1f;
   color: #fff;
   font-family: vaR(--thin-font);
+}
+
+footer a{
+  color: white;
+  padding-right: 10px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+footer a:active{
+  color: white;
+}
+
+footer a:hover{
+  color: #ffa599;
 }
 
 /*---SMall Multimple car view---*/
@@ -321,36 +337,36 @@ list-style: none;
     align-items: center;
   }
 
+  .main-container h1{
+    font-family: var(--thin-font);
+    margin: 5px;
+  }
+
+  /*---MUltiple car View---*/
+
+  #inv-display{
+    display: grid;
+  }
+
 
   .reviews ul li{
     font-size: 20px;
   }
 
-  .main-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 1.4fr 1.3fr;
-    gap: 5px 5px;
-    grid-template-areas:
-      "motors-tittle motors-tittle"
-      "hero hero"
-      "reviews upgrades";
-  }
+  /*.motors-tittle {*/
+  /*  grid-area: motors-tittle;*/
+  /*  font-family: var(--thin-font);*/
+  /*}*/
 
-  .motors-tittle {
-    grid-area: motors-tittle;
-    font-family: var(--thin-font);
-  }
+  /*.hero {*/
+  /*  grid-area: hero;*/
+  /*}*/
 
-  .hero {
-    grid-area: hero;
-  }
+  /*.reviews {*/
+  /*  grid-area: reviews;*/
+  /*}*/
 
-  .reviews {
-    grid-area: reviews;
-  }
-
-  .upgrades {
-    grid-area: upgrades;
-  }
+  /*.upgrades {*/
+  /*  grid-area: upgrades;*/
+  /*}*/
 }
