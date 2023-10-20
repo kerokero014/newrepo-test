@@ -29,6 +29,8 @@ async function getInventoryByClassificationId(classification_id) {
   }
 }
 
+
+// hw#3
 async function getInventoryByInvId(inv_id) {
   try {
     const data = await pool.query(
