@@ -42,17 +42,18 @@ header a:link {
   text-decoration: none;
 }
 /*===NAVBAR===*/
+
 nav {
-  background-color: #333; 
+  background-color: #333;
   overflow: hidden;
 }
 
-nav a:link{
+nav a:link {
   color: white;
   text-decoration: none;
 }
 
-nav a:visited{
+nav a:visited {
   color: white;
 }
 
@@ -76,7 +77,9 @@ nav li {
   text-decoration: none;
   list-style: none;
 }
+
 /*===HERO===*/
+
 .hero {
   padding: 20px;
   background-color: #333;
@@ -218,102 +221,122 @@ footer {
   font-family: vaR(--thin-font);
 }
 
-footer a{
+footer a {
   color: white;
   padding-right: 10px;
   font-weight: 800;
   text-decoration: none;
 }
 
-footer a:active{
+footer a:active {
   color: white;
 }
 
-footer a:hover{
+footer a:hover {
   color: #ffa599;
 }
 
 /*---SMall Multimple car view---*/
 
-#inv-display{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-  padding: 5px;
+#inv-display {
+  display: grid;
+  gap: 1em;
+  list-style: none;
+  /* padding: 0; */
+  padding: 1em;
+  justify-content: center;
 }
-#inv-display li a:link{
+
+#inv-display li img {
+  /* height: 100%; */
+  max-height: 50%;
+}
+
+#inv-display li a:link {
   color: black;
   text-decoration: none;
 }
 
-#inv-display li a:active{
+#inv-display li a:active {
   color: black;
 }
 
-#inv-display li a:visited{
+#inv-display li a:visited {
   color: black;
 }
 
-#inv-display li a:hover{
+#inv-display li a:hover {
   color: #ffa599;
 }
 
-#inv-display li{
-list-style: none;
+#inv-display li {
+  list-style: none;
+  background-color: lightgrey;
+  border-radius: 25px;
+  box-shadow: 10px 11px 26px -11px rgba(0,0,0,0.75);
 }
 
-#inv-display img{
+#inv-display img {
   width: 300px;
   margin: 15px;
+  border-radius: 5px;
 }
 
-.namePrice span{
+.namePrice span {
   font-size: 18px;
   margin: 10px;
-
 }
-
-
-
-
-
-
-
-
-
 
 /*--SMall Single Car view---*/
 
-.container h1,h2{
+.container h1,
+h2 {
   font-family: var(--thin-font);
   margin: 10px;
 }
 
-.container strong{
+.container strong {
   font-family: var(--reg-font);
 }
-#singleVehicleWrapper{
+#singleVehicleWrapper {
   display: flex;
   flex-direction: column;
   margin: 12px;
 }
-#singleVehicleWrapper img{
+#singleVehicleWrapper img {
   width: 95%;
   padding: 2px;
 }
-#singleVehicleDetails{
+#singleVehicleDetails {
   list-style: none;
 }
 
-#singleVehicleDetails li{
+#singleVehicleDetails li {
   margin: 10px;
 }
 
-@media only screen and (min-width: 748px) {
+@media screen and (min-width: 875px) {
+  #inv-display {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  #inv-display li {
+    width: 21em;
+  }
+  /* single car view */
+  #singleVehicleWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  #singleVehicleWrapper img {
+    width: auto;
+    max-height: 14em;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
   body {
     background-color: #fff;
-    max-width: 900px;
+    max-width: 1480px;
     margin: auto;
     border-style: solid;
     border-color: #ffa599;
@@ -329,7 +352,7 @@ list-style: none;
     font-size: 25px;
   }
   .hero img {
-    width:70%;
+    width: 70%;
   }
   .hero {
     display: flex;
@@ -337,35 +360,30 @@ list-style: none;
     align-items: center;
   }
 
-  .main-container h1{
+  .main-container h1 {
     font-family: var(--thin-font);
     margin: 5px;
   }
 
   /*---MUltiple car View---*/
-
-  #inv-display{
-    display: grid;
+  #inv-display {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .reviews ul li{
+  #inv-display li{
+    width: 70%;
+  }
+
+  #singleVehicleWrapper img {
+    width: auto;
+    max-height: 25em;
+  }
+
+  .reviews ul li {
     font-size: 20px;
   }
 
-  /*.motors-tittle {*/
-  /*  grid-area: motors-tittle;*/
-  /*  font-family: var(--thin-font);*/
-  /*}*/
-
-  /*.hero {*/
-  /*  grid-area: hero;*/
-  /*}*/
-
-  /*.reviews {*/
-  /*  grid-area: reviews;*/
-  /*}*/
-
-  /*.upgrades {*/
-  /*  grid-area: upgrades;*/
-  /*}*/
+  .error-page {
+    background-image: url(../images/site/broken-pepe.jpg);
+  }
 }
