@@ -10,7 +10,7 @@ router.get("/type/:classificationId", handleErrors(invController.buildByClassifi
 // Route to build inventory by vehicle view
 router.get("/detail/:invId", handleErrors(invController.buildByInvId));
 
-
-
+//#
+router.get("/broken", handleErrors(invController.buildBrokenPage));
 
 module.exports = router;

@@ -39,4 +39,14 @@ invCont.buildByInvId = async function (req, res, next) {
   })
 }
 
+
+invCont.buildBrokenPage = async function (req, res, next) {
+  let nav = await utilities.getNav()
+  // view -- broken.ejs
+  res.render("./inventory/broken", {
+    title: 'Ops, error',
+    nav,
+    errors: null,
+  })
+}
 module.exports = invCont
