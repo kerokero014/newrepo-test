@@ -273,7 +273,7 @@ footer a:hover {
   list-style: none;
   background-color: lightgrey;
   border-radius: 25px;
-  box-shadow: 10px 11px 26px -11px rgba(0,0,0,0.75);
+  box-shadow: 10px 11px 26px -11px rgba(0, 0, 0, 0.75);
 }
 
 #inv-display img {
@@ -315,7 +315,13 @@ h2 {
   margin: 10px;
 }
 
+/*--MEduim VIew ----*/
+
 @media screen and (min-width: 875px) {
+  .siteName a {
+    font-size: 30px;
+  }
+
   #inv-display {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -323,15 +329,23 @@ h2 {
   #inv-display li {
     width: 21em;
   }
-  /* single car view */
-  #singleVehicleWrapper {
-    grid-template-columns: 1fr 1fr;
-  }
   #singleVehicleWrapper img {
-    width: auto;
-    max-height: 14em;
+    width: 50%;
+    height: auto;
+  }
+
+  #singleVehicleWrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    margin: 10px;
+  }
+
+  #singleVehicleWrapper li {
+    margin: 15px;
   }
 }
+/*--- Large View ---*/
 
 @media only screen and (min-width: 1700px) {
   body {
@@ -370,20 +384,32 @@ h2 {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  #inv-display li{
+  #inv-display li {
     width: 70%;
+    margin: 10px;
   }
 
   #singleVehicleWrapper img {
-    width: auto;
-    max-height: 25em;
+    width: 50%;
+    height: auto;
+  }
+
+  #singleVehicleWrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    margin: 10px;
+  }
+
+  #singleVehicleWrapper li {
+    margin: 15px;
   }
 
   .reviews ul li {
     font-size: 20px;
   }
 
-  .error-page {
+  /*.error-page {
     background-image: url(../images/site/broken-pepe.jpg);
-  }
+  }*/
 }
