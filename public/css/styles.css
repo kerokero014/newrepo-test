@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,100&display=swap");
+
 /******* Change Box Model ***************/
 *,
 *:before,
@@ -7,6 +8,7 @@
   padding: 0;
   margin: 0;
 }
+
 :root {
   --thin-font: "Kanit", sans-serif;
   --reg-font: Arial, Helvetica, sans-serif;
@@ -15,6 +17,7 @@
 html {
   background-image: url(../images/site/checkerboard.jpg);
 }
+
 body {
   background-color: #fff;
   margin: auto;
@@ -22,12 +25,15 @@ body {
   border-color: #ffa599;
   font-family: var(--reg-font);
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
+
 #tools a {
   font-size: 20px;
 }
+
 #top-header {
   background-color: white;
   color: black;
@@ -36,11 +42,13 @@ body {
   justify-content: space-between;
   font-family: var(--thin-font);
 }
+
 header a:link {
   font-size: 30px;
   color: black;
   text-decoration: none;
 }
+
 /*===NAVBAR===*/
 
 nav {
@@ -61,17 +69,23 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Use Flexbox to align items horizontally */
+  display: flex;
+  /* Use Flexbox to align items horizontally */
 }
+
 nav li {
-  flex: 1; /* Distribute available space equally among the list items */
+  flex: 1;
+  /* Distribute available space equally among the list items */
   text-align: center;
   padding: 14px 16px;
 }
+
 nav li:hover {
-  background-color: #070707; /* Change the hover background color as needed */
+  background-color: #070707;
+  /* Change the hover background color as needed */
   color: white;
 }
+
 nav li {
   color: white;
   text-decoration: none;
@@ -80,28 +94,61 @@ nav li {
 
 /*===HERO===*/
 
+.main-div {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.1fr 0.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "motors-tittle motors-tittle"
+    "hero hero"
+    "upgrades reviews";
+}
+
+.motors-tittle {
+  grid-area: motors-tittle;
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.upgrades {
+  grid-area: upgrades;
+}
+
+.reviews {
+  grid-area: reviews;
+}
+
 .hero {
   padding: 20px;
   background-color: #333;
   color: #fff;
 }
+
 .hero img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .text-block {
   padding: 10px;
 }
+
 .text-block h2 {
   font-size: 1.7em;
   margin: 0;
 }
+
 .text-block p {
   font-size: 1.5em;
   margin: 5px 0;
 }
+
 .text-block button {
   background-color: #ffa599;
   color: black;
@@ -112,6 +159,7 @@ nav li {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .text-block button:hover {
   background-color: #774e48;
   color: white;
@@ -121,6 +169,7 @@ nav li {
   background-color: #774e48;
   color: white;
 }
+
 .reviews {
   margin: 5px;
   padding: 10px;
@@ -142,11 +191,12 @@ nav li {
   width: fit-content;
   margin: 5px;
 }
+
 .upgrades {
   margin: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 1.4fr 1.4fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "delorean-tittle delorean-tittle"
@@ -168,6 +218,7 @@ nav li {
   padding: 5px;
   grid-area: area-o;
 }
+
 .area-t {
   border-radius: 5px;
   display: flex;
@@ -178,6 +229,7 @@ nav li {
   padding: 5px;
   grid-area: area-t;
 }
+
 .area-tr {
   border-radius: 5px;
   display: flex;
@@ -188,6 +240,7 @@ nav li {
   padding: 5px;
   grid-area: area-tr;
 }
+
 .area-f {
   border-radius: 5px;
   display: flex;
@@ -298,15 +351,18 @@ h2 {
 .container strong {
   font-family: var(--reg-font);
 }
+
 #singleVehicleWrapper {
   display: flex;
   flex-direction: column;
   margin: 12px;
 }
+
 #singleVehicleWrapper img {
   width: 95%;
   padding: 2px;
 }
+
 #singleVehicleDetails {
   list-style: none;
 }
@@ -315,9 +371,38 @@ h2 {
   margin: 10px;
 }
 
+/*--- Error Page --- */
+
+.error-page {
+  background-image: url(../images/site/broken-pepe.jpg);
+  background-size: cover;
+  padding: 5px;
+  height: 50vw;
+}
+
+.error-page h1, h2{
+  background-color: #ffffff96;
+  color: #070707;
+  display: flex;
+  justify-content: center;
+}
+
 /*--MEduim VIew ----*/
 
 @media screen and (min-width: 875px) {
+  body {
+    background-color: #fff;
+    max-width: 880px;
+    margin: auto;
+    border-style: solid;
+    border-color: #ffa599;
+  }
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .siteName a {
     font-size: 30px;
   }
@@ -326,12 +411,14 @@ h2 {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
+
   #inv-display li {
     width: 21em;
   }
+
   #singleVehicleWrapper img {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
 
   #singleVehicleWrapper {
@@ -344,7 +431,25 @@ h2 {
   #singleVehicleWrapper li {
     margin: 15px;
   }
+  #tools a {
+    font-size: 26px;
+  }
+
+  /*---error page---*/
+  .error-page {
+    background-image: url(../images/site/broken-pepe.jpg);
+    background-size: cover;
+    padding: 5px;
+    height: 30vw;
+  }
+  .error-page h1, h2{
+    background-color: #ffffff96;
+    color: #070707;
+    display: flex;
+    justify-content: center;
+  }
 }
+
 /*--- Large View ---*/
 
 @media only screen and (min-width: 1700px) {
@@ -360,15 +465,19 @@ h2 {
     color: black;
     font-size: 50px;
   }
+
   #tools a {
     font-size: 30px;
   }
+
   nav ul li {
     font-size: 25px;
   }
+
   .hero img {
     width: 70%;
   }
+
   .hero {
     display: flex;
     flex-direction: row;
@@ -410,7 +519,17 @@ h2 {
     font-size: 20px;
   }
 
-  /*.error-page {
+  .error-page {
     background-image: url(../images/site/broken-pepe.jpg);
-  }*/
+    background-size: cover;
+    padding: 5px;
+    height: 40vw;
+  }
+  .error-page h1, h2{
+    background-color: #ffffff96;
+    color: #070707;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
