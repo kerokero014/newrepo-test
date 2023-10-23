@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Playfair+Display:italic=1&display=swap');
-
-
 /******* Change Box Model ***************/
 *,
 *:before,
@@ -9,6 +6,7 @@
   padding: 0;
   margin: 0;
 }
+
 
 :root {
   --thin-font:  'Playfair Display', serif;
