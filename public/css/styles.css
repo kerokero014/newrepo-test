@@ -272,7 +272,7 @@ footer {
   padding: 10px;
   background-color: #1f1f1f;
   color: #fff;
-  font-family: vaR(--thin-font);
+  font-family: var(--thin-font);
 }
 
 footer a {
