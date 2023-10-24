@@ -1,15 +1,14 @@
 <% if (title) { %>
-    <h1>
-        <%= title %>
-    </h1>
-    <% } else { res.redirect('/') } %>
+    <h1><%= title %></h1>
+  <% } else {
+    res.redirect('/')
+    } %>
 
-        <h2><%- messages() %></h2>
+<h2><%- messages() %></h2>
 
 
 <div class="form-container">
-    <h2>Login Form</h2>
-    <form action="/account/login" >
+    <form action="/account/log-in" method="post">
         <fieldset>
             <legend>Account Information</legend>
             <div class="form-group">
@@ -26,5 +25,5 @@
             <button type="submit">Login</button>
         </div>
     </form>
-    <p>Don't have an account? <a href="#">Sign Up</a></p>
+    <p>Don't have an account? <a href="/account/register">Sign Up</a></p>
 </div>
