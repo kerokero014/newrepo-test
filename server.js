@@ -59,8 +59,6 @@ app.use(require("./routes/static"))
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
 app.use("/inv", require("./routes/inventoryRoute"))
-// 500 Route
-app.get("/500", utilities.handleErrors(baseController.build500));
 
 //app.get("/", function(req, res) {
 //  res.render("index", {title: "Home"});
