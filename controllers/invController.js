@@ -30,9 +30,10 @@ invCont.buildByInvId = async function (req, res, next) {
   const vehicleMake = data[0].inv_make
   const vehicleModel = data[0].inv_model
   const vehicleYear = data[0].inv_year
+  const vehicleColor = data[0].inv_color
   // view -- vehicle.ejs
   res.render("./inventory/vehicle", {
-    title: vehicleYear + ' ' + vehicleMake + ' ' + vehicleModel,
+    title: vehicleYear + ' ' + vehicleMake + ' ' + vehicleModel + ' ' +vehicleColor,
     nav,
     grid,
     errors: null,

@@ -82,6 +82,7 @@ Util.buildVehicleGrid = async function (data) {
             vehicle.inv_price
           )}</li>
           <li><strong>Description: </strong>${vehicle.inv_description}</li>
+          <li><strong>Color: </strong>${vehicle.inv_color}</li>
           <li><strong>Miles: </strong>${new Intl.NumberFormat("en-US").format(
             vehicle.inv_miles
           )}</li>
