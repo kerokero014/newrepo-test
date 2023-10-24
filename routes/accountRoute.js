@@ -9,6 +9,9 @@ const utilities = require("../utilities")
 * *************************************** */
 router.get("/log-in", utilities.handleErrors(accountController.buildLogin))
 
+// Resgitration route 
+router.get("/register", utilities.handleErrors(accountController.buildRegister))
+
 
 
 module.exports = router
