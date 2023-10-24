@@ -101,7 +101,8 @@ Util.buildVehicleGrid = async function (data) {
  **************************************** */
 Util.handleErrors = (fn) => (req, res, next) =>
   Promise.resolve(fn(req, res, next)).catch(next);
- 
+
+  
 Util.buildBrokenPage = function(){
   let broken = ''
   return broken
