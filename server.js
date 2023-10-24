@@ -51,6 +51,8 @@ app.set("view engine", "ejs");
 app.use(expressLayouts);
 app.set("layout", "./layouts/layout"); // not at views root
 
+
+
 /* ***********************
  * Routes
  *************************/
@@ -59,6 +61,12 @@ app.use(require("./routes/static"))
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
 app.use("/inv", require("./routes/inventoryRoute"))
+//account Route
+app.use("/acount", require("./routes/accountRoute"))
+
+
+
+
 
 //app.get("/", function(req, res) {
 //  res.render("index", {title: "Home"});
