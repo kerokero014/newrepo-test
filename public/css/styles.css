@@ -7,10 +7,9 @@
   margin: 0;
 }
 
-
 :root {
-  --thin-font:  'Playfair Display', serif;
-  --reg-font: 'Crimson Text', serif;
+  --thin-font: "Playfair Display", serif;
+  --reg-font: "Crimson Text", serif;
 }
 
 html {
@@ -379,7 +378,8 @@ h2 {
   height: 50vw;
 }
 
-.error-page h1, .error-page h2{
+.error-page h1,
+.error-page h2 {
   background-color: #ffffff96;
   color: #070707;
   display: flex;
@@ -451,11 +451,79 @@ h2 {
     padding: 5px;
     height: 30vw;
   }
-  .error-page h1, .error-page h2{
+  .error-page h1,
+  .error-page h2 {
     background-color: #ffffff96;
     color: #070707;
     display: flex;
     justify-content: center;
+  }
+
+  /*---LOGIN PAGE---- MID*/
+
+  .form-container {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: auto;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-family: var(--thin-font);
+    font-size: 25px;
+  }
+
+  .form-container legend{
+    font-size: 24px;
+  }
+
+  .form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--reg-font);
+    font-size: 25px;
+
+  }
+
+  .form-group button {
+    width: 100%;
+    background-color: #d9b8b3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .form-group button:hover {
+    background-color: #5f5b59;
+    color: white;
+  }
+
+  .signup-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .signup-link:hover {
+    text-decoration: underline;
   }
 }
 
@@ -534,11 +602,67 @@ h2 {
     padding: 5px;
     height: 40vw;
   }
-  .error-page h1, .error-page h2{
+  .error-page h1,
+  .error-page h2 {
     background-color: #ffffff96;
     color: #070707;
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+  /*-----LOGIN PAGE=-----  LARGE*/
+  .form-container {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-group button {
+    width: 30%;
+    background-color: #d9b8b3;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .form-group button:hover {
+    background-color: #5f5b59;
+    color: white;
+  }
+
+  .signup-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .signup-link:hover {
+    text-decoration: underline;
   }
 }
