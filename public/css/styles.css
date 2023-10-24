@@ -386,6 +386,133 @@ h2 {
   justify-content: center;
 }
 
+
+/*---LOGIN PAGE---- MID*/
+
+.form-container {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-family: var(--thin-font);
+  font-size: 25px;
+}
+
+.form-container legend{
+  font-size: 24px;
+}
+
+.form-group input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--reg-font);
+  font-size: 25px;
+
+}
+
+.form-group button {
+  width: 100%;
+  background-color: #d9b8b3;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+  background-color: #5f5b59;
+  color: white;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+
+/*---REGISTRY PAGE SMALL -----*/
+
+.regist-container {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin: auto;
+}
+
+.regist-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.regist-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-family: var(--thin-font);
+  font-size: 25px;
+}
+
+.regist-container legend{
+  font-size: 24px;
+}
+
+.regist-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--reg-font);
+  font-size: 25px;
+
+}
+
+.regist-group button {
+  width: 100%;
+  background-color: #d9b8b3;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.regist-group button:hover {
+  background-color: #5f5b59;
+  color: white;
+}
+
 /*--MEduim VIew ----*/
 
 @media screen and (min-width: 875px) {
@@ -524,6 +651,65 @@ h2 {
 
   .signup-link:hover {
     text-decoration: underline;
+  }
+
+
+  /*---REGISTRY PAGE MEDIUM -----*/
+
+  .regist-container {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: auto;
+  }
+
+  .regist-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .regist-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-family: var(--thin-font);
+    font-size: 25px;
+  }
+
+  .regist-container legend{
+    font-size: 24px;
+  }
+
+  .regist-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--reg-font);
+    font-size: 25px;
+
+  }
+
+  .regist-group button {
+    width: 100%;
+    background-color: #d9b8b3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .regist-group button:hover {
+    background-color: #5f5b59;
+    color: white;
   }
 }
 
