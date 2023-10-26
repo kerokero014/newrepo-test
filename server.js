@@ -63,7 +63,8 @@ app.get("/", utilities.handleErrors(baseController.buildHome))
 app.use("/inv", require("./routes/inventoryRoute"))
 //account Route
 app.use("/account", require("./routes/accountRoute"))
-
+//500 route
+app.get("/500", utilities.handleErrors(baseController.build500));
 
 
 
