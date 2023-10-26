@@ -392,7 +392,7 @@ h2 {
 .form-container {
   text-align: center;
   border: 1px solid #ccc;
-  padding: 40px;
+  padding: 38px;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -403,6 +403,7 @@ h2 {
 .form-group {
   margin-bottom: 20px;
   text-align: left;
+  padding: 7px;
 }
 
 .form-group label {
@@ -410,7 +411,7 @@ h2 {
   margin-bottom: 8px;
   color: #333;
   font-family: var(--thin-font);
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .form-container legend{
@@ -471,6 +472,7 @@ h2 {
 .regist-group {
   margin-bottom: 20px;
   text-align: left;
+  padding: 8px;
 }
 
 .regist-group label {
@@ -478,11 +480,11 @@ h2 {
   margin-bottom: 8px;
   color: #333;
   font-family: var(--thin-font);
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .regist-container legend{
-  font-size: 24px;
+  font-size: 17px;
 }
 
 .regist-container input {
@@ -492,7 +494,7 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: var(--reg-font);
-  font-size: 25px;
+  font-size: 18px;
 
 }
 
@@ -609,7 +611,7 @@ h2 {
     margin-bottom: 8px;
     color: #333;
     font-family: var(--thin-font);
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .form-container legend{

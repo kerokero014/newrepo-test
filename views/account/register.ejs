@@ -8,7 +8,7 @@
 
 <div class="regist-container">
   <form action="/account/register" method="post">
-    <p>* All fields are required</p>
+    <p><strong>* All fields are required</strong></p>
     <fieldset>
 
       <div class="regist-group">
@@ -20,7 +20,8 @@
         <label for="account_lastname">Last name:</label>
         <input type="text" name="account_lastname" id="account_lastname" placeholder="Enter your last name" value="<%= locals.account_lastname %>" pattern="^[A-Za-z0-9\-']+$" required>
       </div>
-      <div class="regist-group>
+      
+      <div class="regist-group">
         <label for="account_email">Email:</label>
         <input type="email" name="account_email" id="account_email" placeholder="Enter your email" value="<%= locals.account_email %>" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+.\.[a-zA-Z]{2,}$" required>
       </div>
@@ -31,6 +32,7 @@
         <p>* Passwords must have minimum 12 characters and include 1 capital letter, 1 number and 1 special character</p>
         <input type="submit" value="Sign up">
       </div>
+
     </fieldset>
     <p>Already have an account? <a href="/account/login">Sign in</a></p> 
   </form> 
