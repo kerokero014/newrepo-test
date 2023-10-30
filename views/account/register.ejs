@@ -1,65 +1,44 @@
 <% if (title) { %>
-<h1><%= title %></h1>
-<% } else { res.redirect('/') } %> <%#- messages() %>
+  <h1>
+    <%= title %>
+  </h1>
+  <% } else { res.redirect('/') } %> <%#- messages() %>
 
-<div class="regist-container">
-  <form id="registerForm" action="/account/register" method="post">
-    <p><strong>* All fields are required</strong></p>
-    <fieldset>
-      <div class="regist-group">
-        <label for="account_firstname">First name:</label>
-        <input
-          type="text"
-          name="account_firstname"
-          id="account_firstname"
-          placeholder="Enter your first name"
-          required
-        />
+      <div class="regist-container">
+        <form id="registerForm" action="/account/register" method="post">
+          <p><strong>* All fields are required</strong></p>
+          <fieldset>
+            <div class="regist-group">
+              <label for="account_firstname">First name:</label>
+              <input type="text" name="account_firstname" id="account_firstname" placeholder="Enter your first name"
+                pattern="^[A-Za-z0-9\-']+$" autofocus required />
+            </div>
+
+            <div class="regist-group">
+              <label for="account_lastname">Last name:</label>
+              <input type="text" name="account_lastname" id="account_lastname" placeholder="Enter your last name"
+                pattern="^[A-Za-z0-9\-']+$" required />
+            </div>
+
+            <div class="regist-group">
+              <label for="account_email">Email:</label>
+              <input type="email" name="account_email" id="account_email" placeholder="Enter your email"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+.\.[a-zA-Z]{2,}$" required />
+            </div>
+
+            <div class="regist-group">
+              <label for="accountPassword">Password:</label>
+              <span>Passwords must be at least 12 characters and contain at least 1
+                number, 1 capital letter and 1 special character</span>
+              <input type="password" name="account_password pword" id="accountPassword" required
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$" />
+            </div>
+            <div id="pswdBtn">Show Password</div>
+            <div class="form-group" value="Sing Up">
+              <button type="submit">Register</button>
+            </div>
+          </fieldset>
+          <p>Already have an account? <a href="/account/log-in">Sign in</a></p>
+        </form>
       </div>
-
-      <div class="regist-group">
-        <label for="account_lastname">Last name:</label>
-        <input
-          type="text"
-          name="account_lastname"
-          id="account_lastname"
-          placeholder="Enter your last name"
-          required
-        />
-      </div>
-
-      <div class="regist-group">
-        <label for="account_email">Email:</label>
-        <input
-          type="email"
-          name="account_email"
-          id="account_email"
-          placeholder="Enter your email"
-          required
-        />
-      </div>
-
-      <div class="regist-group">
-        <label for="account_password">Password:</label>
-        <input
-          type="password"
-          name="account_password"
-          id="account_password"
-          placeholder="Pick a strong password"
-          required
-        />
-        <p>
-          * Passwords must have minimum 12 characters and include 1 capital
-          letter, 1 number and 1 special character
-        </p>
-      </div>
-    </fieldset>
-
-    <div class="form-group" value="Sing Up">
-      <button type="submit">Sign Up</button>
-    </div>
-
-    <p>Already have an account? <a href="/account/log-in">Sign in</a></p>
-  </form>
-</div>
-<script src="/js/script.js"></script>
+      <script src="/js/script.js"></script>
