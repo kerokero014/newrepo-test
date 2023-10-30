@@ -12,6 +12,10 @@ router.get("/log-in", utilities.handleErrors(accountController.buildLogin))
 // Resgitration route 
 router.get("/register", utilities.handleErrors(accountController.buildRegister))
 
+router.post(
+    "/regiter",
+    utilities.handleErrors(accountController.registerAccount)
+)
 
 
 module.exports = router
