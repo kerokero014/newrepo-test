@@ -16,7 +16,6 @@ const env = require("dotenv").config();
 const app = express();
 const static = require("./routes/static");
 const bodyParser = require("body-parser")
-const cookieParser = require("cookie-parser")
 
 
 
