@@ -521,6 +521,20 @@ h2 {
   color: white;
 }
 
+#pswdBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+#pswdBtn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
 /*--MEduim VIew ----*/
 
 @media screen and (min-width: 875px) {
