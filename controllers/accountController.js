@@ -1,17 +1,7 @@
 const utilities = require("../utilities");
 const bcrypt = require("bcryptjs")
 
-/* ****************************************
- *  Deliver login view
- * *************************************** */
 
-async function buildLogin(req, res, next) {
-  let nav = await utilities.getNav();
-  res.render("account/log-in", {
-    title: "Login",
-    nav,
-  });
-}
 
 /* ****************************************
  *  Deliver registration view
@@ -75,5 +65,18 @@ async function registerAccount(req, res) {
     });
   }
 }
+/* ****************************************
+ *  Deliver login view
+ * *************************************** */
+
+async function buildLogin(req, res, next) {
+  let nav = await utilities.getNav();
+  res.render("account/log-in", {
+    title: "Login",
+    nav,
+  });
+}
+
+
 
 module.exports = { buildLogin, buildRegister, registerAccount };
