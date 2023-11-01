@@ -68,6 +68,8 @@ app.use("/inv", require("./routes/inventoryRoute"))
 app.use("/account", require("./routes/accountRoute"))
 //500 route
 app.get("/500", utilities.handleErrors(baseController.build500));
+// Route to build login view
+
 
 
 
