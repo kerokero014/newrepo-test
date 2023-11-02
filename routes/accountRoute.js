@@ -10,25 +10,25 @@ const regValidate = require("../utilities/account-validation");
 router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
 
 // Resgitration route
-router.get("/register",utilities.handleErrors(accountController.buildRegister));
+router.get(
+  "/register",
+  utilities.handleErrors(accountController.buildRegister)
+);
 
 // Process the registration data
 router.post(
-    "/register",
-    regValidate.registationRules(),
-    regValidate.checkRegData,
-    utilities.handleErrors(accountController.registerAccount)
-)
-
+  "/register",
+  regValidate.registationRules(),
+  regValidate.checkRegData,
+  utilities.handleErrors(accountController.registerAccount)
+);
 
 // Process the login attempt
 router.post(
-    "/login",
-    regValidate.loginRules(),
-    regValidate.checkLoginData,
-    handleErrors(accountController.accountLogin)
-)
-
-
+  "/login",
+  regValidate.loginRules(),
+  regValidate.checkLoginData,
+  handleErrors(accountController.accountLogin)
+);
 
 module.exports = router;

@@ -13,7 +13,7 @@ async function buildRegister(req, res, next) {
     nav,
     errors: null,
   });
-}
+} 
 
 /* ****************************************
  *  Process Registration
