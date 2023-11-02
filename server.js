@@ -61,16 +61,23 @@ app.set("layout", "./layouts/layout"); // not at views root
  *************************/
 app.use(require("./routes/static"))
 //index route
+//
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
+//
 app.use("/inv", require("./routes/inventoryRoute"))
 //account Route
+//
 app.use("/account", require("./routes/accountRoute"))
 //500 route
+//
 app.get("/500", utilities.handleErrors(baseController.build500));
+// Account routes
+//
+app.use("/account", require("./routes/accountRoute"))
 // Route to build login view
-
-
+//
+router.get("/login", utilities.handleErrors(accountController.buildLogin))
 
 
 //app.get("/", function(req, res) {
