@@ -14,7 +14,7 @@ const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const env = require("dotenv").config();
 const app = express();
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
 
 
 
