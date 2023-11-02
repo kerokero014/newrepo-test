@@ -73,7 +73,6 @@ app.get("/500", utilities.handleErrors(baseController.build500));
 
 
 
-
 //app.get("/", function(req, res) {
 //  res.render("index", {title: "Home"});
 //});
