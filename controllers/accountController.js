@@ -2,7 +2,6 @@ const utilities = require("../utilities");
 const bcrypt = require("bcryptjs")
 
 
-
 /* ****************************************
  *  Deliver registration view
  * *************************************** */
@@ -65,6 +64,10 @@ async function registerAccount(req, res) {
     });
   }
 }
+
+
+
+
 /* ****************************************
  *  Deliver login view
  * *************************************** */

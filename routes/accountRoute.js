@@ -1,9 +1,10 @@
+const accountModel = require("../models/account-model");
 const express = require("express");
 const router = new express.Router();
 const accountController = require("../controllers/accountController");
 const utilities = require("../utilities");
 const regValidate = require("../utilities/account-validation");
-const accountModel = require("../models/account-model")
+
 
 /* ****************************************
  *  Deliver login view
@@ -11,10 +12,7 @@ const accountModel = require("../models/account-model")
 router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
 
 // Resgitration route
-router.get(
-  "/register",
-  utilities.handleErrors(accountController.buildRegister)
-);
+router.post('/register', utilities.handleErrors(accountController.registerAccount));
 
 // Process the registration data
 router.post(
@@ -22,14 +20,14 @@ router.post(
   regValidate.registationRules(),
   regValidate.checkRegData,
   utilities.handleErrors(accountController.registerAccount)
-);
+)
 
 // Process the login attempt
 router.post(
   "/login",
-  regValidate.loginRules(),
-  regValidate.checkLoginData,
-  handleErrors(accountController.accountLogin)
-);
+  (req, res) => {
+    res.status(200).send('login process')
+  }
+)
 
 module.exports = router;
