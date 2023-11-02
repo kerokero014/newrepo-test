@@ -15,7 +15,7 @@ const expressLayouts = require("express-ejs-layouts");
 const env = require("dotenv").config();
 const app = express();
 const bodyParser = require("body-parser");
-
+//const accountController = require("./controllers/accountController")
 
 
 /* ***********************
@@ -31,9 +31,6 @@ app.use(session({
   saveUninitialized: true,
   name: 'sessionId',
 }))
-
-
-
 
 // Express Messages Middleware
 app.use(require('connect-flash')())
@@ -61,20 +58,15 @@ app.set("layout", "./layouts/layout"); // not at views root
  *************************/
 app.use(require("./routes/static"))
 //index route
-//
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
-//
 app.use("/inv", require("./routes/inventoryRoute"))
+
 //account Route
-//
-app.use("/account", require("./routes/accountRoute"))
-//500 route
-//
+
+//500
 app.get("/500", utilities.handleErrors(baseController.build500));
-// Route to build login view
-//
-router.get("/login", utilities.handleErrors(accountController.buildLogin))
+
 
 
 //app.get("/", function(req, res) {

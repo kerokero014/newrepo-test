@@ -1,4 +1,3 @@
-const accountModel = require("../models/account-model");
 const express = require("express");
 const router = new express.Router();
 const accountController = require("../controllers/accountController");
@@ -13,6 +12,7 @@ router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
 
 // Resgitration route
 router.post('/register', utilities.handleErrors(accountController.registerAccount));
+
 
 // Process the registration data
 router.post(

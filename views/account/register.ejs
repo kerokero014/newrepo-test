@@ -4,7 +4,7 @@
 </h1>
 <% } else { res.redirect('/') } %>
 
-<%- messages() %>
+<%#- messages() %>
   
 <% if (errors) { %>
   <ul class="notice">
@@ -26,8 +26,6 @@
         placeholder="Enter your first name"
         pattern="^[A-Za-z0-9\-']+$"
         autofocus
-        required
-        value="<=% locals.account_firstname %>"
       />
     </div>
     <div class="regist-group">
