@@ -5,18 +5,16 @@
 /* ***********************
  * Require Statements
  *************************/
-const session = require("express-session")
-const pool = require('./database/')
-const utilities = require('./utilities'); 
 const inventoryRoute = require("./routes/inventoryRoute")
-const baseController = require("./controllers/baseController")
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const env = require("dotenv").config();
 const app = express();
-const bodyParser = require("body-parser");
-//const accountController = require("./controllers/accountController")
-
+const baseController = require("./controllers/baseController")
+const utilities = require('./utilities'); 
+const session = require("express-session")
+const pool = require('./database/')
+const bodyParser = require("body-parser")
 
 /* ***********************
  * Middleware
@@ -38,8 +36,6 @@ app.use(function(req, res, next){
   res.locals.messages = require('express-messages')(req, res)
   next()
 })
-
-
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
@@ -61,9 +57,8 @@ app.use(require("./routes/static"))
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
 app.use("/inv", require("./routes/inventoryRoute"))
-
 //account Route
-
+app.use("/account", require("./routes/accountRoute"))
 //500
 app.get("/500", utilities.handleErrors(baseController.build500));
 
