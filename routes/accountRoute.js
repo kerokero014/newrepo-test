@@ -4,16 +4,16 @@ const accountController = require("../controllers/accountController");
 const utilities = require("../utilities");
 const regValidate = require("../utilities/account-validation");
 
-/* ****************************************
- *  Deliver login view
- * *************************************** */
-router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
-// Resgitration route
+// Route for login
+router.get("/login", utilities.handleErrors(accountController.buildLogin));
 
+//Route for register
 router.get(
   "/register",
   utilities.handleErrors(accountController.buildRegister)
 );
+
+
 
 // Process the registration data
 router.post(
@@ -21,7 +21,7 @@ router.post(
   regValidate.registationRules(),
   regValidate.checkRegData,
   utilities.handleErrors(accountController.registerAccount)
-)
+);
 
 // Process the login attempt
 router.post("/login", (req, res) => {

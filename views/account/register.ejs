@@ -26,6 +26,7 @@
         placeholder="Enter your first name"
         pattern="^[A-Za-z0-9\-']+$"
         autofocus
+        required value="<%= locals.account_firstname %>"
       />
     </div>
     <div class="regist-group">
@@ -36,7 +37,7 @@
         id="accountFirstname"
         pattern=" ^[A-Za-z0-9\-']+$"
         required
-        value="<=% locals.account_lastname %>"
+        value="<%= locals.account_lastname %>"
       />
     </div>
     <div class="regist-group">
@@ -48,7 +49,7 @@
         placeholder="Enter your email"
         pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+.\.[a-zA-Z]{2,}$"
         required
-        value="<=% locals.account_email %>"
+        value="<%= locals.account_email %>"
       />
     </div>
     <div class="regist-group">
