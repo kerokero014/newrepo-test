@@ -8,11 +8,11 @@
   
 <% if (errors) { %>
   <ul class="notice">
- <% errors.array().forEach(error => { %>
-   <li><%= error.msg %></li>
-<%  }) %>
- </ul>
-<% } %>
+  <% errors.array().forEach(error => { %>
+  <li><%= error.msg %></li>
+  <% })  %>
+  </ul>
+  <% } %>
 
 <div class="regist-container">
   <form id="registerForm" action="/account/register" method="post">
@@ -35,7 +35,6 @@
         type="text"
         name="account_firstname"
         id="accountFirstname"
-        pattern=" ^[A-Za-z0-9\-']+$"
         required
         value="<%= locals.account_lastname %>"
       />

@@ -2,10 +2,10 @@ const accountModel = require("../models/account-model");
 const utilities = require(".");
 const { body, validationResult } = require("express-validator");
 const validate = {};
-
-/*  **********************************
- *  Registration Data Validation Rules
- * ********************************* */
+//
+///*  **********************************
+// *  Registration Data Validation Rules
+// * ********************************* */
 validate.registationRules = () => {
   return [
     // firstname is required and must be string
@@ -50,8 +50,8 @@ validate.registationRules = () => {
 };
 
 /* ******************************
- * Check data and return errors or continue to registration
- * ***************************** */
+// * Check data and return errors or continue to registration
+// * ***************************** */
 validate.checkRegData = async (req, res, next) => {
   const { account_firstname, account_lastname, account_email } = req.body;
   let errors = [];

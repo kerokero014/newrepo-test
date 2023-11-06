@@ -17,11 +17,11 @@ const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
 const accountRoute = require("./routes/accountRoute");
-//const cookieParser = require("cookie-parser")
-
-/* ***********************
- * Middleware
- * ************************/
+////const cookieParser = require("cookie-parser")
+//
+///* ***********************
+// * Middleware
+// * ************************/
 app.use(session({
   store: new (require('connect-pg-simple')(session))({
     createTableIfMissing: true,
@@ -32,7 +32,7 @@ app.use(session({
   saveUninitialized: true,
   name: 'sessionId',
 }))
-
+//
 // Express Messages Middleware
 app.use(require('connect-flash')())
 app.use(function(req, res, next){
@@ -62,7 +62,6 @@ app.get("/", utilities.handleErrors(baseController.buildHome))
 app.use("/inv", inventoryRoute)
 //account Route
 app.use("/account", accountRoute)
-
 //500
 app.get("/500", utilities.handleErrors(baseController.build500))
 

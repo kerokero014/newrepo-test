@@ -13,13 +13,13 @@ router.get(
   utilities.handleErrors(accountController.buildRegister)
 );
 
-// Process the registration data
+//Process the registration data
 router.post(
   "/register",
   regValidate.registationRules(),
   regValidate.checkRegData,
-  utilities.handleErrors(accountController.registerAccount)
-);
+  handleErrors(accountController.registerAccount)
+)
 
 // Process the login attempt
 router.post("/login", (req, res) => {

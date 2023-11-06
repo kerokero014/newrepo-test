@@ -28,9 +28,9 @@ async function buildRegister(req, res, next) {
   });
 } 
 
-/* ****************************************
- *  Process Registration
- * *************************************** */
+///* ****************************************
+// *  Process Registration
+// * *************************************** */
 async function registerAccount(req, res) {
   let nav = await utilities.getNav();
   const {
@@ -83,5 +83,5 @@ async function registerAccount(req, res) {
 
 
 
-
+ 
 module.exports = { buildLogin, buildRegister, registerAccount };
