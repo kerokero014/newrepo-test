@@ -66,7 +66,7 @@ async function registerAccount(req, res) {
       "notice",
       `Congratulations, you\'re registered ${account_firstname}. Please log in.`
     );
-    res.status(201).render("account/login", {
+    res.status(201).render("account/log-in", {
       title: "Login",
       nav,
     });

@@ -15,7 +15,7 @@ const utilities = require('./utilities');
 const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
-const accountRoute = require("./routes/accountRoute")
+//const accountRoute = require("./routes/accountRoute");
 //const cookieParser = require("cookie-parser")
 
 /* ***********************
@@ -58,9 +58,9 @@ app.use(require("./routes/static"))
 //index route
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
-app.use("/inv",inventoryRoute)
+app.use("/inv", require("./routes/inventoryRoute"))
 //account Route
-app.use("/account", accountRoute)
+app.use("/account", require("./routes/accountRoute"))
 //500
 app.get("/500", utilities.handleErrors(baseController.build500))
 
