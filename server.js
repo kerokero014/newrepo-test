@@ -65,11 +65,6 @@ app.use("/account", accountRoute)
 app.get("/500", utilities.handleErrors(baseController.build500))
 
 
-
-//app.get("/", function(req, res) {
-//  res.render("index", {title: "Home"});
-//});
-
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {
   next({status: 404, message: 'Sorry, we appear to have lost that page.'})
