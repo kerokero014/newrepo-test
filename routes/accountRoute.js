@@ -14,12 +14,12 @@ router.get(
 );
 
 //Process the registration data
-router.post(
-  "/register",
-  regValidate.registationRules(),
-  regValidate.checkRegData,
-  handleErrors(accountController.registerAccount)
-)
+//router.post(
+//  "/register",
+//  regValidate.registationRules(),
+//  regValidate.checkRegData,
+//  handleErrors(accountController.registerAccount)
+//)
 
 // Process the login attempt
 router.post("/login", (req, res) => {
