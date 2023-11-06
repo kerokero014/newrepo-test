@@ -5,6 +5,7 @@
 /* ***********************
  * Require Statements
  *************************/
+const static = require("./routes/static")
 const inventoryRoute = require("./routes/inventoryRoute")
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
@@ -15,7 +16,7 @@ const utilities = require('./utilities');
 const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
-//const accountRoute = require("./routes/accountRoute");
+const accountRoute = require("./routes/accountRoute");
 //const cookieParser = require("cookie-parser")
 
 /* ***********************
@@ -54,13 +55,14 @@ app.set("layout", "./layouts/layout"); // not at views root
 /* ***********************
  * Routes
  *************************/
-app.use(require("./routes/static"))
+app.use(static)
 //index route
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
-app.use("/inv", require("./routes/inventoryRoute"))
+app.use("/inv", inventoryRoute)
 //account Route
-app.use("/account", require("./routes/accountRoute"))
+app.use("/account", accountRoute)
+
 //500
 app.get("/500", utilities.handleErrors(baseController.build500))
 

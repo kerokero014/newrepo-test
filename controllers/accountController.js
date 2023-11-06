@@ -68,13 +68,14 @@ async function registerAccount(req, res) {
     );
     res.status(201).render("account/log-in", {
       title: "Login",
-      nav,
+      nav, 
     });
   } else {
     req.flash("notice", "Sorry, the registration failed.");
     res.status(501).render("account/register", {
       title: "Registration",
       nav,
+      errors: null,
     });
   }
 }
