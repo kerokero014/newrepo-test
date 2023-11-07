@@ -8,11 +8,11 @@
   
 <% if (errors) { %>
   <ul class="notice">
-  <% errors.array().forEach(error => { %>
-  <li><%= error.msg %></li>
-  <% })  %>
-  </ul>
-  <% } %>
+ <% errors.array().forEach(error => { %>
+   <li><%= error.msg %></li>
+<%  }) %>
+ </ul>
+<% } %>
 
 <div class="regist-container">
   <form id="registerForm" action="/account/register" method="post">
