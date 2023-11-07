@@ -535,6 +535,13 @@ h2 {
   background-color: #45a049; /* Darker green on hover */
 }
 
+.notice li{
+  color:red;
+  margin:5px;
+  font-size: 25px;
+  list-style: none;
+}
+
 /*--MEduim VIew ----*/
 
 @media screen and (min-width: 875px) {
@@ -735,6 +742,13 @@ h2 {
   }
 }
 
+.notice li{
+  color:red;
+  margin:5px;
+  font-size: 25px;
+  list-style: none;
+}
+
 /*--- Large View ---*/
 
 @media only screen and (min-width: 1700px) {
@@ -872,5 +886,12 @@ h2 {
 
   .signup-link:hover {
     text-decoration: underline;
+  }
+
+  .notice li{
+    color:red;
+    margin:5px;
+    font-size: 25px;
+    list-style: none;
   }
 }
