@@ -22,8 +22,6 @@ router.get(
 router.get("/broken", utilities.handleErrors(invController.buildBrokenPage));
 
 //Route to build inventory index
-router.get(
-  "/", handleErrors(invController.buildManagement)
-)
+router.get("/", handleErrors(invController.buildManagement))
 
 module.exports = router;
