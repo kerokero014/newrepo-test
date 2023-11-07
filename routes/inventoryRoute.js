@@ -10,6 +10,7 @@ router.get(
   "/type/:classificationId",
   utilities.handleErrors(invController.buildByClassificationId)
 );
+
 // #3
 // Route to build inventory by vehicle view
 router.get(
@@ -21,6 +22,8 @@ router.get(
 router.get("/broken", utilities.handleErrors(invController.buildBrokenPage));
 
 //Route to build inventory index
-router.get("/", utilities.handleErrors(invController.buildManagement));
+router.get(
+  "/", handleErrors(invController.buildManagement)
+)
 
 module.exports = router;

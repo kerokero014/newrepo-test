@@ -43,6 +43,9 @@ async function getInventoryByInvId(inv_id) {
   }
 }
 
+/*Assingment 4 
+management view and more */
+
 async function checkExistingClassification(classification_name){
   try {
     const sql = "SELECT * FROM classification WHERE classification_name = $1"
