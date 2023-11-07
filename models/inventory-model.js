@@ -43,6 +43,7 @@ async function getInventoryByInvId(inv_id) {
   }
 }
 
+
 /*Assingment 4 
 management view and more */
 
