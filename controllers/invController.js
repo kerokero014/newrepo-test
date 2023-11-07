@@ -54,16 +54,17 @@ invCont.buildBrokenPage = async function (req, res, next) {
   Assingment 4# 
   Building the Managment view 
 ******************/
+invCont.buildManagement = async function (req, res, next) {
+ let nav = await utilities.getNav()
+ const classSelect = await utilities.getClassSelect()
 
-invCont.buildManagment = async function (req, res, next){
-  let nav = await utilities.getNav()
-  const classSelect = await utilities.getclassSelect();
-  res.render("./inventory/managment", {
-    title: 'Inventory Managment',
-    nav,
-    errors: null,
-    classSelect,
-  })
+ // view -- management.ejs
+ res.render("./inventory/management", {
+   title: 'Inventory Management',
+   nav,
+   errors: null,
+   classSelect,
+ })
 }
 
 module.exports = invCont
