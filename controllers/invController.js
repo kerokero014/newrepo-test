@@ -79,4 +79,49 @@ invCont.buildAddclass = async function (req, res, next) {
   })
 }
 
+invCont.addClass = async function (req, res, next) {
+  const { classification_name } = req.body
+  
+  const regResult = await invModel.addClass(
+    classification_name
+  )
+  let nav = await utilities.getNav()
+  let classSelect = await utilities.getClassSelect()
+  
+  if (regResult) {
+    req.flash(
+      "success",
+      "Classification added"
+    )
+    res.status(200).render("./inventory/management", {
+      title: "Vehicle Management",
+      nav,
+      errors: null,
+      classSelect,
+    })
+  } else {
+    req.flash("error", "Class addition failed")
+    res.status(501).render("./inventory/addclass", {
+      title: "Add Classification",
+      nav,
+      errors: null,
+    })
+  }
+}
+
+/**
+ * Build add vehicle view 
+ **/
+invCont.buildAddvehicle = async function (req, res, next) {
+  let nav = await utilities.getNav()
+  let classSelect = await utilities.getClassSelect()
+  // view -- addvehicle.ejs
+  res.render("./inventory/addvehicle", {
+    title: 'Add Vehicle',
+    nav,
+    errors: null,
+    classSelect,
+  })
+}
+
 module.exports = invCont
