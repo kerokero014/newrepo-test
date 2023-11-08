@@ -24,4 +24,13 @@ router.get("/broken", utilities.handleErrors(invController.buildBrokenPage));
 //Route to build inventory index
 router.get("/", handleErrors(invController.buildManagement))
 
+// Process the new classification data
+router.post(
+  "/addclass",
+  invValidate.classRules(),
+  invValidate.checkClassData,
+  handleErrors(invController.addClass)
+)
+
+
 module.exports = router;

@@ -57,4 +57,16 @@ async function checkExistingClassification(classification_name){
   }
 }
 
-module.exports = {getClassifications, getInventoryByClassificationId, getInventoryByInvId, checkExistingClassification};
+/* ***************************
+ *  Add new classification
+ * ************************** */
+async function addClass(classification_name) {
+  try {
+    const sql = "INSERT INTO public.classification (classification_name) VALUES ($1) RETURNING *"
+    return await pool.query(sql, [classification_name])
+  } catch (error) {
+    return error.message
+  }
+}
+
+module.exports = {getClassifications, getInventoryByClassificationId, getInventoryByInvId, checkExistingClassification, addClass};
