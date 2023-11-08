@@ -69,7 +69,6 @@ invCont.buildManagement = async function (req, res, next) {
 /**
  * Build Add classification view
  */
-
 invCont.buildAddclass = async function (req, res, next) {
   let nav = await utilities.getNav()
   // view -- addclass.ejs
