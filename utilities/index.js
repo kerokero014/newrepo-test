@@ -109,6 +109,41 @@ Util.buildBrokenPage = function(){
   return broken
 }
 
+/* ************************
+ * Constructs the classification HTML select options
+ ************************** */
+Util.getClassSelect = async function (selectedOption) {
+  let data = await invModel.getClassifications()
+  let options = `<option value="">Choose a classification</option>`
+  data.rows.forEach((row => {
+    options += 
+      `<option value="${row.classification_id}"
+      ${row.classification_id === Number(selectedOption) ? 'selected': ''}>
+      ${row.classification_name}
+      </option>`
+  }))
+  return options
+}
+
+/* ************************
+ * Constructs the account HTML select options
+ ************************** */
+Util.getAccountSelect = async function (selectedOption) {
+  let data = await accountModel.getAccounts()
+  let options = `<option value="">Select a Recipient</option>`
+  data.rows.forEach((row => {
+    options += 
+      `<option value="${row.account_id}"
+      ${row.account_id === Number(selectedOption) ? 'selected': ''}>
+      ${row.account_firstname} ${row.account_lastname}
+      </option>`
+  }))
+  return options
+}
+
+
+
+
 Util.checkAuthorization = async (req, res, next) => {
   // auth : 0
   let auth = 0
