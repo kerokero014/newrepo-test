@@ -25,11 +25,8 @@ router.get("/broken", utilities.handleErrors(invController.buildBrokenPage));
 router.get("/", handleErrors(invController.buildManagement))
 
 // Process the new classification data
-router.post(
-  "/addclass",
-  invValidate.classRules(),
-  invValidate.checkClassData,
-  handleErrors(invController.addClass)
+router.get(
+  "/addclass", handleErrors(invController.buildAddclass)
 )
 
 
