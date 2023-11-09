@@ -529,7 +529,8 @@ h2 {
   background-color: #45a049; /* Darker green on hover */
 }
 
-.notice li, .success li {
+.notice li,
+.success li {
   color: red;
   margin: 5px;
   font-size: 25px;
@@ -554,7 +555,7 @@ h2 {
   margin: 20px;
 }
 
-#classificationList{
+#classificationList {
   background-color: #d9b8b3;
   color: black;
   padding: 16px;
@@ -563,7 +564,6 @@ h2 {
   cursor: pointer;
   border-radius: 5px;
 }
-
 
 /*--MEduim VIew ----*/
 
@@ -787,7 +787,7 @@ h2 {
   margin: 20px;
 }
 
-#classificationList{
+#classificationList {
   background-color: #d9b8b3;
   color: black;
   padding: 16px;
@@ -960,7 +960,7 @@ h2 {
     margin: 20px;
   }
 
-  #classificationList{
+  #classificationList {
     background-color: #d9b8b3;
     color: black;
     padding: 16px;
@@ -969,4 +969,7 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
   }
+
+  /* Management page*/
+
 }
