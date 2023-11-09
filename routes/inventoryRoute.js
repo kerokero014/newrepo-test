@@ -34,4 +34,6 @@ router.get("/addvehicle", handleErrors(invController.buildAddvehicle));
 
 // Process the new vehicle data
 router.post("/addvehicle", handleErrors(invController.addVehicle));
+
+
 module.exports = router;

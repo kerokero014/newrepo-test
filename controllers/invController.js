@@ -124,4 +124,48 @@ invCont.buildAddvehicle = async function (req, res, next) {
   })
 }
 
+/**
+ *  Add Vehicle once in Add Vehicle page 
+ */
+invCont.addVehicle = async function (req, res, next) {
+  let nav = await utilities.getNav()
+  let classSelect = await utilities.getClassSelect()
+  const { classification_id, inv_make, inv_model, inv_year, inv_description, inv_image, inv_thumbnail, inv_price, inv_miles, inv_color } = req.body
+
+  const regResult = await invModel.addVehicle(
+    classification_id, 
+    inv_make, 
+    inv_model, 
+    inv_year, 
+    inv_description, 
+    inv_image, 
+    inv_thumbnail, 
+    inv_price, 
+    inv_miles, 
+    inv_color
+  )
+
+  if (regResult) {
+    req.flash(
+      "success",
+      "Vehicle added"
+    )
+    res.status(201).render("./inventory/management", {
+      title: "Inventory Management",
+      nav,
+      errors: null,
+      classSelect,
+    })
+  } else {
+    req.flash("error", "Vehicle addition failed")
+    res.status(501).render("./inventory/addvehicle", {
+      title: "Add Vehicle",
+      nav,
+      classSelect,
+      errors: null,
+    })
+  }
+}
+
+
 module.exports = invCont
