@@ -141,26 +141,4 @@ Util.getAccountSelect = async function (selectedOption) {
   return options
 }
 
-
-
-
-Util.checkAuthorization = async (req, res, next) => {
-  // auth : 0
-  let auth = 0
-  // logged in ? next : 0
-  if (res.locals.loggedin) {
-    const account = res.locals.accountData
-    // admin ? 1 : 0
-    account.account_type == "Admin" 
-      || account.account_type == "Employee" ? auth = 1 : auth = 0 
-  }
-  // !auth ? 404 : next()
-  if (!auth) {
-    req.flash("notice", "Please log in")
-    res.redirect("/account/login")
-    return
-  } else {
-    next()
-  }
-}
 module.exports = Util;
