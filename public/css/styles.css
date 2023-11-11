@@ -434,7 +434,7 @@ h2 {
 .form-group button {
   width: 100%;
   background-color: #d9b8b3;
-  color: white;
+  color: black;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -445,7 +445,7 @@ h2 {
 
 .form-group button:hover {
   background-color: #5f5b59;
-  color: white;
+  color: black;
 }
 
 .signup-link {
@@ -501,7 +501,7 @@ h2 {
 .regist-group button {
   width: 100%;
   background-color: #d9b8b3;
-  color: white;
+  color: black;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -512,20 +512,20 @@ h2 {
 
 .regist-group button:hover {
   background-color: #5f5b59;
-  color: white;
+  color: black;
 }
 
-#pswdBtn {
+#pswdBtn button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4caf50; /* Green background color */
-  color: white; /* White text color */
+  background-color: #a6b6a7; /* Green background color */
+  color: black; /* White text color */
   border: none; /* Remove border */
   border-radius: 5px; /* Optional: Add rounded corners */
   cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-#pswdBtn:hover {
+#pswdBtn button:hover {
   background-color: #45a049; /* Darker green on hover */
 }
 
@@ -813,6 +813,58 @@ input:focus:invalid {
   border-radius: 5px;
 }
 
+/***ADD A CAR PAGE***/
+.form {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form p {
+  font-size: 14px;
+  color: #888;
+}
+
+.form--fieldset {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #ffa599;
+  color: black;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #494a49;
+}
+
+form p {
+  font-size: 25px;
+  color: red;
+}
+
 /*--- Large View ---*/
 
 @media only screen and (min-width: 1700px) {
@@ -988,5 +1040,55 @@ input:focus:invalid {
 
   /* Management page*/
 
-  /* Add car page */
+  /***ADD A CAR PAGE***/
+  .form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form p {
+    font-size: 14px;
+    color: #888;
+  }
+
+  .form--fieldset {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  select,
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    background-color: #ffa599;
+    color: black;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #494a49;
+  }
+
+  form p {
+    font-size: 25px;
+    color: red;
+  }
 }
