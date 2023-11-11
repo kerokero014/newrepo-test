@@ -564,6 +564,22 @@ h2 {
   cursor: pointer;
   border-radius: 5px;
 }
+/* Form valid and invalid css*/
+
+input:required:valid {
+  /* insert your own styles for valid form input */
+  border: 2px solid green;
+  background-color: #dfefca;
+  color: #83bc38;
+}
+
+input:required:invalid,
+input:focus:invalid {
+  /* Your existing styles for invalid form input */
+  border: 2px solid red;
+  background-color: #ffdddd;
+  color: #8b0000;
+}
 
 /*--MEduim VIew ----*/
 
@@ -973,5 +989,4 @@ h2 {
   /* Management page*/
 
   /* Add car page */
- 
 }
