@@ -154,7 +154,7 @@ Util.checkJWTToken = (req, res, next) => {
      if (err) {
       req.flash("Please log in")
       res.clearCookie("jwt")
-      return res.redirect("/account/login")
+      return res.redirect("/account/log-in")
      }
      res.locals.accountData = accountData
      res.locals.loggedin = 1
