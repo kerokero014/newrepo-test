@@ -17,6 +17,9 @@ dependencies:
   connect-pg-simple:
     specifier: ^9.0.0
     version: 9.0.0
+  cookie-parse:
+    specifier: ^0.4.0
+    version: 0.4.0
   cookie-parser:
     specifier: ^1.4.6
     version: 1.4.6
@@ -258,6 +261,11 @@ packages:
 
   /content-type@1.0.5:
     resolution: {integrity: sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA==}
+    engines: {node: '>= 0.6'}
+    dev: false
+
+  /cookie-parse@0.4.0:
+    resolution: {integrity: sha512-WichJHIaIzLrGkCbdup1SzJABOv/724MubsY2eaT5QkZz8ojNcZzn+gJ4Drrklm/le7lr0j/q0FaEgjooXhAog==}
     engines: {node: '>= 0.6'}
     dev: false
 
