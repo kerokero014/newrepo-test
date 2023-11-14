@@ -24,13 +24,15 @@ router.post(
 // Process the login attempt
 router.post(
   "/log-in",
-  regValidate.loginRules(),
-  regValidate.checkLoginData,
+  //regValidate.loginRules(),
+  //regValidate.checkLoginData,
   utilities.handleErrors(accountController.accountLogin)
 )
 
 // Route for login
 router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
 
+//Route for management account
+router.get("/", utilities.handleErrors(accountController.buildAccount));
 
 module.exports = router;

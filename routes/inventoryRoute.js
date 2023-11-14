@@ -4,7 +4,6 @@ const router = new express.Router();
 const utilities = require("../utilities");
 const invController = require("../controllers/invController");
 const { handleErrors } = require("../utilities");
-const validate = require("../utilities/invValidation");
 const invValidate = require("../utilities/invValidation");
 
 // Route to build inventory by classification view
