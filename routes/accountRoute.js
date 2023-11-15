@@ -32,7 +32,11 @@ router.post(
 // Route for login
 router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
 
+/************************** 
 //Route for management account
-router.get("/", utilities.handleErrors(accountController.buildAccount));
+/**************************/ 
+router.get("/", utilities.checkLogin, utilities.handleErrors(accountController.buildAccount));
+
+
 
 module.exports = router;

@@ -48,4 +48,8 @@ router.post(
   handleErrors(invController.addVehicle)
 );
 
+// Build inventory management table inventory view
+router.get("/getInventory/:classification_id", handleErrors(invController.getInventoryJSON))
+
+
 module.exports = router;
