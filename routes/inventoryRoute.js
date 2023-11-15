@@ -51,5 +51,13 @@ router.post(
 // Build inventory management table inventory view
 router.get("/getInventory/:classification_id", handleErrors(invController.getInventoryJSON))
 
+// Build edit vehicle information view
+router.get("/edit/:inv_id", handleErrors(invController.buildVehicleEdit))
+
+// Post route /update
+router.post(
+  "/update",  handleErrors(invController.updateVehicle)
+)
+
 
 module.exports = router;

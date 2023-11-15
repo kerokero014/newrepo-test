@@ -581,6 +581,11 @@ input:focus:invalid {
   color: #8b0000;
 }
 
+.form p {
+  font-size: 25px;
+  color: red;
+}
+
 /*--MEduim VIew ----*/
 
 @media screen and (min-width: 875px) {
@@ -1087,8 +1092,5 @@ form p {
     background-color: #494a49;
   }
 
-  form p {
-    font-size: 25px;
-    color: red;
-  }
+  
 }
