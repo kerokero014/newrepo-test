@@ -276,6 +276,26 @@ invCont.updateVehicle = async function (req, res, next) {
   }
 }
 
-
-
+//// Delete Vehicle
+//invCont.deleteVehicle = async function (req, res, next) {
+//  let nav = await utilities.getNav()
+//  const inv_id = parseInt(req.params.inv_id)
+//  const deleteResult = await invModel.deleteVehicle(inv_id)
+//  if (deleteResult) {
+//    req.flash("success", "Vehicle was successfully deleted")
+//    res.status(201).render("./inventory/management", {
+//      title: "Inventory Management",
+//      nav,
+//      errors: null,
+//    })
+//  } else {
+//    req.flash("error", "Sorry, the delete failed.")
+//    res.status(501).render("./inventory/management", {
+//      title: "Inventory Management",
+//      nav,
+//      errors: null,
+//    })
+//  }
+//}
+//
 module.exports = invCont
