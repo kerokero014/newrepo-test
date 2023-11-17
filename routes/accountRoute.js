@@ -38,6 +38,15 @@ router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
 router.get("/", utilities.checkLogin, utilities.handleErrors(accountController.buildAccount));
 
 
+/**
+ * Activity 5 
+ */
+////Route for logout
+//router.get("/log-out", utilities.handleErrors(accountController.accountLogout));
+////Route for edit account
+//router.get("/edit", utilities.checkLogin, utilities.handleErrors(accountController.buildEditAccount));
+
+
 
 
 module.exports = router;

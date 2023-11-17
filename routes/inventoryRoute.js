@@ -36,9 +36,7 @@ router.post(
 );
 
 // Route to build add vehicle view
-router.get(
-  "/addvehicle", handleErrors(invController.buildAddvehicle)
-);
+router.get("/addvehicle", handleErrors(invController.buildAddvehicle));
 
 // Process the new vehicle data
 router.post(
@@ -49,15 +47,31 @@ router.post(
 );
 
 // Build inventory management table inventory view
-router.get("/getInventory/:classification_id", handleErrors(invController.getInventoryJSON))
+router.get(
+  "/getInventory/:classification_id",
+  handleErrors(invController.getInventoryJSON)
+);
 
 // Build edit vehicle information view
-router.get("/edit/:inv_id", handleErrors(invController.buildVehicleEdit))
+router.get("/edit/:inv_id", handleErrors(invController.buildVehicleEdit));
 
 // Post route /update
-router.post(
-  "/update",  handleErrors(invController.updateVehicle)
-)
+router.post("/update", handleErrors(invController.updateVehicle));
+
+// Build delete vehicle view
+router.get("/delete/:inv_id", handleErrors(invController.buildVehicleDeleteConfirm));
+
+
+// Post route /delete
+router.post("/delete", handleErrors(invController.deleteVehicle));
+
+
+
+// Build delete classification view
+//router.get(
+//  "/deleteclass/:classification_id",
+//  handleErrors(invController.buildClassDelete)
+//);
 
 
 module.exports = router;
