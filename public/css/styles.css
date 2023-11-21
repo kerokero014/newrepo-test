@@ -830,7 +830,7 @@ input:focus:invalid {
 
 .form p {
   font-size: 14px;
-  color: #888;
+  color: black;
 }
 
 .form--fieldset {
@@ -867,7 +867,7 @@ input[type="submit"]:hover {
 
 form p {
   font-size: 25px;
-  color: red;
+  color: black;
 }
 
 /*--- Large View ---*/
@@ -888,6 +888,7 @@ form p {
 
   #tools a {
     font-size: 30px;
+    color: #333;
   }
 
   nav ul li {
@@ -1057,7 +1058,7 @@ form p {
 
   .form p {
     font-size: 14px;
-    color: #888;
+    color: black;
   }
 
   .form--fieldset {
