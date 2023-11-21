@@ -5,8 +5,6 @@ const handleErrors = require("../utilities");
 const utilities = require("../utilities");
 const regValidate = require("../utilities/account-validation");
 
-
-
 //Route for register
 router.get(
   "/register",
@@ -27,25 +25,49 @@ router.post(
   regValidate.loginRules(),
   regValidate.checkLoginData,
   utilities.handleErrors(accountController.accountLogin)
-)
+);
 
 // Route for login
 router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
 
 /************************** 
 //Route for management account
-/**************************/ 
-router.get("/", utilities.checkLogin, utilities.handleErrors(accountController.buildAccount));
-
+/**************************/
+router.get(
+  "/",
+  utilities.checkLogin,
+  utilities.handleErrors(accountController.buildAccount)
+);
 
 /**
- * Activity 5 
+ * Activity 5
  */
-////Route for logout
-//router.get("/log-out", utilities.handleErrors(accountController.accountLogout));
-////Route for edit account
-//router.get("/edit", utilities.checkLogin, utilities.handleErrors(accountController.buildEditAccount));
 
+// Route to build account login view
+router.get("/edit/:account_id", utilities.handleErrors(accountController.buildEditAccount));
+
+
+// Process the updated account information
+router.post(
+  "/accountupdate",
+  regValidate.updateAccountRules(),
+  regValidate.checkEditAccountData,
+  utilities.handleErrors(accountController.editAccountInfo)
+)
+
+// Process the account password change
+router.post(
+  "/changepassword",
+  regValidate.changePasswordRules(),
+  regValidate.checkEditAccountData,
+  utilities.handleErrors(accountController.editAccountPassword)
+)
+
+// logout route
+router.get(
+  "/logout",
+  utilities.handleErrors(accountController.logoutAccount),
+)
 
 
 
