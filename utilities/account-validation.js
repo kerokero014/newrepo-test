@@ -197,4 +197,14 @@ validate.checkEditAccountData = async (req, res, next) => {
 //account_password: I@mAnAdm!n1strat0r
 
 
+/*Test for deleting account and editing account*/ 
+//account_firstname: Johnny 
+//account_lastname: Test
+//account_email: johnnyLinG@340.edu
+//account_password: I@mAT3st!ngAcc0unt
+
+//Second password
+//account_password: I@mAT3st!ngAcc0unt2
+
+
 module.exports = validate;
