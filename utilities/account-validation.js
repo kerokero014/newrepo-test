@@ -201,7 +201,7 @@ validate.checkEditAccountData = async (req, res, next) => {
 //account_firstname: Johnny 
 //account_lastname: Test
 //account_email: johnnyLinG@340.edu
-//account_password: I@mAT3st!ngAcc0unt
+//account_password: I@mAT3st!ngAcc0unt - currently in use
 
 //Second password
 //account_password: I@mAT3st!ngAcc0unt2
