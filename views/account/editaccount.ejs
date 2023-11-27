@@ -6,7 +6,7 @@
   } %>
   
   <!-- displays messages -->
-  <h3><%- messages() %></h3>
+  <%- messages() %>
   
   <!-- display errors -->
   <% if (errors) { %>
@@ -63,8 +63,7 @@
         <% if(locals.account_id) { %> 
           value="<%= locals.account_id %>"
         <% } %>>
-        
       </fieldset>
     </form>
   </div>
-<script src="/js/update.js"></script>
+  <script src="/js/update.js"></script>

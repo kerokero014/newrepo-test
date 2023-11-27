@@ -179,7 +179,7 @@ async function editAccountInfo(req, res) {
 }
 
 /* ****************************************
-*  Process updated password (post /editpassword)
+Process updated password (post /editpassword)
 * *************************************** */
 async function editAccountPassword(req, res) {
   let nav = await utilities.getNav()
