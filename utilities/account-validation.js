@@ -2,7 +2,7 @@ const accountModel = require("../models/account-model");
 const utilities = require(".");
 const { body, validationResult } = require("express-validator");
 const validate = {};
-//
+
 /*  **********************************
  *  Registration Data Validation Rules
  * ********************************* */
