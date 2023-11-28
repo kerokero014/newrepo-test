@@ -7,12 +7,11 @@ VALUES ( 'Tony',
 
 UPDATE public.account
 SET account_type = 'Admin'
-WHERE account_firstname = 'Tony'
-    AND account_lastname = 'Stark'
+WHERE account_id = 1;
 
 DELETE
 FROM public.account WHERE account_firstname = 'Tony'
-AND account_lastname = 'Stark';
+AND account_id = 1;
 
 
 UPDATE public.inventory
