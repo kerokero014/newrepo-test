@@ -128,7 +128,7 @@ validate.updateAccountRules = () => {
     .trim()
     .isEmail()
     .normalizeEmail() // refer to validator.js docs
-    .withMessage("A valid email is required.")
+    .withMessage("A valid email is required."),
   ]
 }
 
