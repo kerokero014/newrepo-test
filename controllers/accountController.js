@@ -155,7 +155,7 @@ async function editAccountInfo(req, res) {
     // can only be passed through http requests, maximum age is 1 hour
     res.cookie("jwt", accessToken, { httpOnly: true, maxAge: 3600 * 1000 })
 
-    req.flash("success", `Congratulations, ${account_firstname} you\'ve succesfully updated your account info.`)
+    req.flash("success", `Congratulations, ${account_firstname} you\'ve succesfully updated your account information!`)
     res.status(201).render("account/account", {
       title: "Edit Account Information",
       nav,
@@ -203,7 +203,7 @@ async function editAccountPassword(req, res) {
   // account account = res.locals.accountData
   if (regResult) {
     const account = await accountModel.getAccountById(account_id)
-    req.flash("success", `Congratulations, ${account_firstname} you\'ve succesfully updated your account info.`)
+    req.flash("success", `Congratulations, ${account_firstname} you\'ve succesfully updated your password!`)
     res.status(201).render("account/account", {
       title: "Edit Account Information",
       nav,
