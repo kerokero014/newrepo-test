@@ -36,7 +36,7 @@ router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
 router.get(
   "/",
   checkLogin,
-  utilities.handleErrors(accountController.buildAccount)
+  handleErrors(accountController.buildAccount)
 );
 
 /**
@@ -46,7 +46,7 @@ router.get(
 // Route to build account login view
 router.get(
   "/edit/:account_id",
-  utilities.handleErrors(accountController.buildEditAccount)
+  handleErrors(accountController.buildEditAccount)
 );
 
 // Process the updated account information
@@ -54,7 +54,7 @@ router.post(
   "/accountupdate",
   regValidate.updateAccountRules(),
   regValidate.checkEditAccountData,
-  utilities.handleErrors(accountController.editAccountInfo)
+  handleErrors(accountController.editAccountInfo)
 );
 
 // Process the account password change
