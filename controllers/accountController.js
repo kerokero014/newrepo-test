@@ -208,7 +208,7 @@ async function editAccountPassword(req, res) {
       title: "Edit Account Information",
       nav,
       errors:null,
-      account_firstname: account.account_firstname,
+      //account_firstname: account.account_firstname,//
     })
   } else {
     // const account = await accountModel.getAccountById(account_id)
