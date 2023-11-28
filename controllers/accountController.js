@@ -203,7 +203,7 @@ async function editAccountPassword(req, res) {
   // account account = res.locals.accountData
   if (regResult) {
     const account = await accountModel.getAccountById(account_id)
-    req.flash("success", `Congratulations, ${account_firstname} you\'ve succesfully updated your password!`)
+    req.flash("success", `Congratulations, ${account_firstname} you\'ve succesfully updated your account password!`)
     res.status(201).render("account/account", {
       title: "Edit Account Information",
       nav,
@@ -220,6 +220,7 @@ async function editAccountPassword(req, res) {
     })
   }
 }
+
 
 /* ****************************************
 *  Logout user

@@ -75,6 +75,7 @@ async function updateAccountInfo(account_firstname, account_lastname, account_em
   }
 }
 
+
 /* *****************************
 * Change account password on account_id (desired output == 1)
 * ***************************** */
@@ -90,7 +91,6 @@ async function changeAccountPassword(account_password, account_id) {
     console.error("changeaccountpassword error " + error)
   }
 }
-
 
 
 module.exports = { registerAccount, checkExistingEmail, getAccountByEmail, getAccountById, updateAccountInfo,  changeAccountPassword };

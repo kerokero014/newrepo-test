@@ -1,7 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const accountController = require("../controllers/accountController");
-const handleErrors = require("../utilities");
+const { handleErrors, checkLogin } = require("../utilities")
 const utilities = require("../utilities");
 const regValidate = require("../utilities/account-validation");
 
@@ -35,7 +35,7 @@ router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
 /**************************/
 router.get(
   "/",
-  utilities.checkLogin,
+  checkLogin,
   utilities.handleErrors(accountController.buildAccount)
 );
 
@@ -62,8 +62,8 @@ router.post(
   "/changepassword",
   regValidate.changePasswordRules(),
   regValidate.checkEditAccountData,
-  utilities.handleErrors(accountController.editAccountPassword)
-);
+  handleErrors(accountController.editAccountPassword)
+)
 
 // logout route
 router.get("/logout", utilities.handleErrors(accountController.logoutAccount));
