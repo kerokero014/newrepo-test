@@ -702,7 +702,7 @@ input:focus:invalid {
   .form-group button {
     width: 100%;
     background-color: #d9b8b3;
-    color: white;
+    color: black;
     padding: 10px;
     border: none;
     border-radius: 5px;
