@@ -44,10 +44,7 @@ router.get(
  */
 
 // Route to build account login view
-router.get(
-  "/edit/:account_id",
-  handleErrors(accountController.buildEditAccount)
-);
+router.get("/edit/:account_id", handleErrors(accountController.buildEditAccount));
 
 // Process the updated account information
 router.post(
@@ -55,7 +52,7 @@ router.post(
   regValidate.updateAccountRules(),
   regValidate.checkEditAccountData,
   handleErrors(accountController.editAccountInfo)
-);
+)
 
 // Process the account password change
 router.post(
@@ -65,7 +62,10 @@ router.post(
   handleErrors(accountController.editAccountPassword)
 )
 
-// logout route
-router.get("/logout", utilities.handleErrors(accountController.logoutAccount));
+router.get(
+  "/logout",
+  handleErrors(accountController.logoutAccount),
+)
+
 
 module.exports = router;
