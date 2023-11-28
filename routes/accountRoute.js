@@ -8,7 +8,7 @@ const regValidate = require("../utilities/account-validation");
 //Route for register
 router.get(
   "/register",
-  utilities.handleErrors(accountController.buildRegister)
+  handleErrors(accountController.buildRegister)
 );
 
 //Process the registration data
@@ -16,7 +16,7 @@ router.post(
   "/register",
   regValidate.registationRules(),
   regValidate.checkRegData,
-  utilities.handleErrors(accountController.registerAccount)
+  handleErrors(accountController.registerAccount)
 );
 
 // Process the login attempt
@@ -24,11 +24,11 @@ router.post(
   "/log-in",
   regValidate.loginRules(),
   regValidate.checkLoginData,
-  utilities.handleErrors(accountController.accountLogin)
+  handleErrors(accountController.accountLogin)
 );
 
 // Route for login
-router.get("/log-in", utilities.handleErrors(accountController.buildLogin));
+router.get("/log-in", handleErrors(accountController.buildLogin));
 
 /************************** 
 //Route for management account

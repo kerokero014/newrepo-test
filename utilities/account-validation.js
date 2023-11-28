@@ -145,7 +145,6 @@ validate.changePasswordRules = () => {
   ]
 }
 
-
 /* ******************************
  * Check data and return errors or continue to EDITACCOUNT
  * ***************************** */
