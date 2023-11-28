@@ -182,42 +182,41 @@ async function editAccountInfo(req, res) {
 Process updated password (post /editpassword)
 * *************************************** */
 async function editAccountPassword(req, res) {
-  let nav = await utilities.getNav()
-  const { account_password, account_id } = req.body
+  let nav = await utilities.getNav();
+  const { account_password, account_id } = req.body;
   
-  // Hash the password before storing
-  let hashedPassword
   try {
-    // regular password and cost (salt is generated automatically)
-    hashedPassword = await bcrypt.hashSync(account_password, 10)
+    // Hash the password before storing
+    const hashedPassword = await bcrypt.hash(account_password, 10);
+
+    // Pass (hashedPassword, account_id) to model UPDATE statement
+    const regResult = await accountModel.changeAccountPassword(hashedPassword, account_id);
+
+    if (regResult) {
+      const account = await accountModel.getAccountById(account_id);
+      req.flash("success", `Congratulations, ${account.account_firstname}, your account password has been updated successfully!`);
+      res.status(201).render("account/account", {
+        title: "Edit Account Information",
+        nav,
+        errors: null,
+        account_firstname: account.account_firstname,
+      });
+    } else {
+      req.flash("error", "Sorry, the update failed.");
+      res.status(501).render("account/editaccount", {
+        title: "Edit Account Information",
+        nav,
+        errors: null,
+      });
+    }
   } catch (error) {
-    req.flash("notice", 'Sorry, there was an error processing the registration.')
+    req.flash("error", "Sorry, there was an error processing the password update.");
+    console.error("Error updating password:", error); // Log the specific error for debugging
     res.status(500).render("account/editaccount", {
-      title: "Registration",
-      nav,
-      errors: null,
-    })
-  }
-  // pass (hashpass, account_id) to model UPDATE statement
-  const regResult = await accountModel.changeAccountPassword(hashedPassword, account_id)
-  // account account = res.locals.accountData
-  if (regResult) {
-    const account = await accountModel.getAccountById(account_id)
-    req.flash("success", `Congratulations, ${account_firstname} you\'ve succesfully updated your account password!`)
-    res.status(201).render("account/account", {
-      title: "Edit Account Information",
-      nav,
-      errors:null,
-      account_firstname: account.account_firstname,
-    })
-  } else {
-    // const account = await accountModel.getAccountById(account_id)
-    req.flash("error", "Sorry, the update failed.")
-    res.status(501).render("account/editaccount", {
       title: "Edit Account Information",
       nav,
       errors: null,
-    })
+    });
   }
 }
 
