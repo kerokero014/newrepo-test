@@ -1,12 +1,5 @@
 const pool = require("../database/");
 
-/* *****************************
-*   Get all accounts (SELECT)
-* *************************** */
-async function getAccounts() {
-  return await pool.query("SELECT * FROM public.account ORDER BY account_email")
-}
-
 
 /* *****************************
 *   Register new account
@@ -101,4 +94,4 @@ async function changeAccountPassword(account_password, account_id) {
 }
 
 
-module.exports = { getAccounts ,registerAccount, checkExistingEmail, getAccountByEmail, getAccountById, updateAccountInfo,  changeAccountPassword };
+module.exports = { registerAccount, checkExistingEmail, getAccountByEmail, getAccountById, updateAccountInfo,  changeAccountPassword };
