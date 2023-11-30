@@ -9,14 +9,14 @@ const invValidate = require("../utilities/invValidation");
 // Route to build inventory by classification view
 router.get(
   "/type/:classificationId",
-  utilities.handleErrors(invController.buildByClassificationId)
+  handleErrors(invController.buildByClassificationId)
 );
 
 // #3
 // Route to build inventory by vehicle view
 router.get(
   "/detail/:invId",
-  utilities.handleErrors(invController.buildByInvId)
+  handleErrors(invController.buildByInvId)
 );
 
 //#3
