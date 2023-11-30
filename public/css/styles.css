@@ -570,7 +570,7 @@ input:required:valid {
   /* insert your own styles for valid form input */
   border: 2px solid green;
   background-color: #dfefca;
-  color: #83bc38;
+  color: #595d54;
 }
 
 input:required:invalid,
